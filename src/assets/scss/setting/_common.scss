@@ -1,0 +1,17 @@
+body {
+    background-color: var(--black);
+    color: var(--white);
+}
+
+// 각 섹션 공통요소
+section {
+    padding: 40px;
+
+    @media (max-width: 800px){
+        padding: 20px;
+    }
+
+    h2 {
+        padding-bottom: 20px;
+    }
+}

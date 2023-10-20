@@ -1,9 +1,9 @@
 import React from 'react'
 
-const Youtuber = () => {
+const Musician = () => {
   return (
     <div>Youtuber</div>
   )
 }
 
-export default Youtuber
+export default Musician

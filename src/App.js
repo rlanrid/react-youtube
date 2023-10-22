@@ -9,6 +9,7 @@ import Main from './components/section/Main'
 import Footer from './components/section/Footer'
 import Search from './pages/Search'
 
+
 const App = () => {
     return (
         <BrowserRouter>

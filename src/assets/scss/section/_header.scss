@@ -1,164 +1,126 @@
-.header_logo {
-    border-bottom: 1px solid var(--black400);
-    
-
+.header__logo {
+    border-bottom: 1px solid var(--black200);
     a {
         display: flex;
         padding: 10px;
-        margin: 5.5px;
+        margin: 10px;
 
         em {
             width: 50px;
             height: 50px;
-            background-color: var(--black);
-            margin-right: 10px;
             border: 2px solid var(--black);
             position: relative;
-            animation: logo 25s 1s ease-in-out infinite;
-            
-
+            border-radius: 50%;
+            animation: logo 15s 1s ease-in-out infinite;
+  
             @keyframes logo {
                 0% {
                     transform: rotate(0deg);
-                    border-radius: 50%;
                 }
-
                 50% {
-                    transform: rotate(720deg);
-                    border-radius: 50%;
-                    border-color: var(--black);
+                    transform: rotate(720deg); 
+                    border-radius: 50px;
+                    background-color: #fff;
                 }
-
                 100% {
                     transform: rotate(0deg);
-                    border-radius: 50%;
                 }
             }
 
             svg {
+                // width: 30px;
+                // height: 32px;
                 position: absolute;
                 left: 7px;
-                top: 6px;
-                color: var(--black);
-                width: 30px;
-                height: 30px;
+                top: 7px;
             }
         }
-
         span {
-            font-size: 23px;
-            line-height: 1.2;
-            font-weight: 900;
-            em {
-                font-style: normal;
-                border: none;
-                margin-right: 5px;
-            }
+            font-size: 24px;
+            line-height: 1;
+            font-weight: 800;
+            font-family: 'nanumSquareNeo';
+            margin-left: 3px;
         }
     }
 }
 
-.header_menu {
+.header__menu {
     padding: 10px;
-    font-family: var(--hahm);
 
     .menu {
+
         li {
             margin-bottom: 5px;
-
+            
             a {
                 font-size: 1rem;
                 display: block;
                 line-height: 1;
-                padding: 1rem 2rem 1rem 2.65rem;
+                color: var(--black100);
+                padding: 1rem 2rem 1rem 2.8rem;
                 border-radius: 40px;
                 position: relative;
+                transition: background-color 0.2s;
+                border: 1px solid transparent;
 
                 &:hover {
-                    background-color: var(--primary-color);
-                    transition: background-color 0.3s ease;
-                    color: var(--black);
+                    background-color: rgb(234, 234, 234);
+                    border: 1px solid  rgb(234, 234, 234);
                 }
-            }
 
-            svg {
-                width: 1.5rem;
-                height: 1.5rem;
-                position: absolute;
-                left: 1rem;
-                top: 0.8rem;
+                svg {
+                    width: 1.25rem;
+                    height: 1.25rem;
+                    position: absolute;
+                    left: 1.25rem;
+                    top: 0.925rem;
+                }
             }
 
             &.active {
+                a {
+                    background-color: rgb(234, 234, 234);
+                    border: 1px solid  rgb(234, 234, 234);
+                }
+            }
+        }
+    }
+    .keyword {
+        border-top: 1px solid var(--white200);
+        padding-top: 20px;
+        li {
+            margin-bottom: 5px;
+            a {
                 font-size: 1rem;
                 display: block;
                 line-height: 1;
-                border-radius: 40px;
-                position: relative;
-                background-color: var(--primary-color);
-                color: var(--black);
-            }
-        }
+                color: var(--black100);
+                padding: 0.6rem 1rem 0.7rem 1.5rem;
+                border: 1px solid var(--black200);
+                border-radius: 50px;
 
-        border-bottom: 1px solid var(--black);
-    }
-
-    .keyword {
-        font-family: var(--mapo);
-        li {
-            border-bottom: 1px dashed var(--black100);
-            padding: 10px 10px;
-            margin-top: 10px;
-
-            a {
-                position: relative;
-
-                svg {
-                    width: 1.2rem;
-                    height: 1.2rem;
-                    position: absolute;
-                    left: 0rem;
-                    top: 0.3rem;
+                &:hover {
+                    color: var(--white);
+                    background-color: var(--black);
                 }
-                
-
-                width: 80%;
-                padding: 5px 25px;
-
             }
-
-            
-        }
-        li:hover {
-
-            background-color: var(--black);
-            color: var(--black);
-            border-radius: 20px;
-            // svg {
-            //     color: #ff0000;
-            // }
-        }
-
-        li:last-child {
-            border-bottom: none;
         }
     }
 }
 
-.header_sns {
-    border-top: 1px solid var(--black);
+.header__sns {
+    border-top: 1px solid var(--black200);
     position: absolute;
-    bottom: 0;
     left: 0;
     right: 0;
+    bottom: 0;
     text-align: center;
-    padding: 18px 0 9px;
-    background-color: var(--black);
+    padding: 18px 0 12px;
+    background-color: var(--primary-color);
 
     li {
         display: inline-block;
-        color: var(--black);
-
         a {
             display: inline-block;
             padding: 5px 7px;

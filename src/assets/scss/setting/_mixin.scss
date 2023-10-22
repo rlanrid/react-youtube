@@ -4,15 +4,14 @@
     text-underline-position: under;
 }
 
-
-// 한 줄 효과
+// 한줄 효과
 @mixin line-one {
     overflow: hidden;
-    white-space: none;
+    white-space: nowrap;
     text-overflow: ellipsis;
 }
 
-// 두 줄 효과
+// 두줄 효과
 @mixin line-two {
     overflow: hidden;
     text-overflow: ellipsis;
@@ -21,8 +20,8 @@
     -webkit-box-orient: vertical;
 }
 
-// 두 줄 이상
-@mixin line($line) {
+// 두줄 이상
+@mixin line($line){
     overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;

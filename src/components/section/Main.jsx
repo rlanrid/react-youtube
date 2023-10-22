@@ -5,7 +5,6 @@ const Main = ( props ) => {
     return (
         <main id='main' role='main'>
             <Search />
-            
             {props.children}
         </main>
     )

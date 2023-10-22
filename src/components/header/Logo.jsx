@@ -4,10 +4,10 @@ import { SiApplemusic } from 'react-icons/si'
 
 const Logo = () => {
     return (
-        <h1 className='header_logo'>
+        <h1 className='header__logo'>
             <Link to='/'>
                 <em><SiApplemusic /></em>
-                <span><em>Youtube</em>MUSIC <br />YOUTUBE</span>
+                <span>MUSIC<br />YOUTUBE</span>
             </Link>
         </h1>
     )

@@ -1,9 +1,9 @@
 import React from 'react'
 
-const Not = () => {
+const not = () => {
   return (
     <div>잘못된 페이지입니다.</div>
   )
 }
 
-export default Not
+export default not

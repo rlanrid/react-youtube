@@ -5,30 +5,30 @@
     width: 260px;
     height: 100%;
     z-index: 1000;
-    background-color: var(--white);
+    background-color: var(--primary-color);
+    border-right: 1px solid var(--black200);
 }
-
 #main {
     max-width: 2000px;
     min-height: 100vh;
     margin: 0 auto;
     padding-left: 260px;
-    background-color: var(--white);
+    background-color: var(--primary-color);
 }
 #footer {
     text-align: center;
-    background-color: var(--white);
-    border-top: 1px solid var(--black400);
+    border-top: 1px solid var(--black200);
     padding: 10px 10px 10px 250px;
+    background-color: var(--primary-color);
 
     a {
-        color: var(--black200);
-        padding: 10px;
+        color: var(--black300);
+        padding: 10px 20px;
         display: inline-block;
 
         &:hover {
             @include underline;
-            text-decoration-color: var(--black);
+            text-decoration-color: var(--black300);
         }
     }
 }

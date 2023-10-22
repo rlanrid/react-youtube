@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import { React, useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 
 const formatDate = (dateString) => {
@@ -10,14 +10,13 @@ const formatDate = (dateString) => {
 }
 
 const Search = () => {
-
-    const [videos, setVideo] = useState([]);
+    const [ videos, setVideo ] = useState([]);
 
     useEffect(() => {
-        fetch("")
+        fetch ("https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=10&key=AIzaSyCcwfeLwQMnPFxjsmhHLfS24wAEPobsHhY")
             .then(response => response.json())
             .then(result => {
-                console.log(result.items)
+                console.log(result.items);
 
                 result.items.forEach((video) => {
                     video.snippet.publishedAt = formatDate(video.snippet.publishedAt);
@@ -31,21 +30,21 @@ const Search = () => {
     return (
         <section id='searchPage'>
             <h2>제목</h2>
-            <div className='video_inner search'>
+            <div className='video__inner search'>
                 {videos.map((video, key) => (
                     <div className='video' key={key}>
-                        <div className='video_thumb'>
-                            <Link
+                        <div className='video__thumb'>
+                            <Link 
                                 to='/video/videoId'
                                 style={{ backgroundImage: `url(${video.snippet.thumbnails.high.url})` }}
                             >
                             </Link>
                         </div>
-                        <div className='video_info'>
-                            <h3 className='title'>
+                        <div className='video__info'>
+                            <div className='title'>
                                 <Link to={`/video/${video.id.videoId}`}>{video.snippet.title}</Link>
-                            </h3>
-                            <p className='desc'>
+                            </div>
+                            <p className="desc">
                                 {video.snippet.description}
                             </p>
                             <div className='info'>
@@ -56,7 +55,7 @@ const Search = () => {
                     </div>
                 ))}
             </div>
-        </section >
+        </section>
     )
 }
 

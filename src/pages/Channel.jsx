@@ -1,19 +1,11 @@
 import React, { useEffect, useState } from 'react'
-import { Link, useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import { fetchFromAPI } from '../utils/api';
 
 import { SiYoutubemusic } from 'react-icons/si'
 import { BiCommentDetail } from 'react-icons/bi'
 import { AiOutlineLike } from 'react-icons/ai'
 import VideoSearch from '../components/video/VideoSearch';
-
-const formatDate = (dateString) => {
-    const date = new Date(dateString);
-    const year = date.getFullYear();
-    const month = String(date.getMonth() + 1).padStart(2, '0');
-    const day = String(date.getDate()).padStart(2, '0');
-    return `${year}-${month}-${day}`;
-}
 
 const Channel = () => {
     

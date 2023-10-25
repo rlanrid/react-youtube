@@ -1,7 +1,4 @@
 import React from 'react'
-import { SiYoutubemusic } from 'react-icons/si'
-import { AiFillStar } from 'react-icons/ai'
-import { GiHeartInside } from 'react-icons/gi'
 import { snsText } from '../../data/header'
 
 
